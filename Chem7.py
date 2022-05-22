@@ -44,7 +44,7 @@ plt.savefig("scatterdatos.png", dpi=1200)
 y1 = [np.log(1/i) for i in t1]
 y2 = [np.log(1/i) for i in t2]
 y3 = [np.log(1/i) for i in t3]
-x = [0.2] + [(vTio[i]*0.2)/(vAg[i] + vTio[i]) for i in range(1, len(vTio))]
+x = [np.log(0.2)] + [np.log((vTio[i]*0.2)/(vAg[i] + vTio[i])) for i in range(1, len(vTio))]
 
 plt.figure(figsize=(15, 5))
 plt.subplot(1, 3, 1)
